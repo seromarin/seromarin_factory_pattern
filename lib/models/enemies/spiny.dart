@@ -1,13 +1,13 @@
-import '../enemy.model.dart';
+import '../enemy.dart';
 
-class Koopa implements Enemy {
+class Spiny implements Enemy {
   @override
   int damage;
 
   @override
   int health;
 
-  Koopa([int damage = 100, int health = 750]) {
+  Spiny({int damage = 50, int health = 1200}) {
     this.damage = damage;
     this.health = health;
   }
@@ -15,5 +15,10 @@ class Koopa implements Enemy {
   @override
   int attack() {
     return damage;
+  }
+
+  @override
+  int life() {
+    return health;
   }
 }

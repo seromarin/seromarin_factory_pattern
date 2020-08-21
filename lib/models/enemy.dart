@@ -3,4 +3,6 @@ abstract class Enemy {
   int health;
 
   int attack();
+
+  int life();
 }

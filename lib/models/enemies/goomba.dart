@@ -1,4 +1,4 @@
-import '../enemy.model.dart';
+import '../enemy.dart';
 
 class Goomba implements Enemy {
   @override
@@ -7,7 +7,7 @@ class Goomba implements Enemy {
   @override
   int health;
 
-  Goomba([int damage = 75, int health = 900]) {
+  Goomba({int damage = 75, int health = 900}) {
     this.damage = damage;
     this.health = health;
   }
@@ -15,5 +15,10 @@ class Goomba implements Enemy {
   @override
   int attack() {
     return damage;
+  }
+
+  @override
+  int life() {
+    return health;
   }
 }
